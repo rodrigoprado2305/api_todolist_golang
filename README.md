@@ -15,6 +15,13 @@ go.mod|github.com/gin-gonic/gin|Biblioteca para utilização do gin
 
 
 
+Config|Description|Description2
+-|-|-
+Configuracoes.ini|ficando ao lado do .exe.|aa
+libmysql.dll|versao 5.7.44.0 x86|aa
+
+
+
 Config|Description
 -|-
 Configuracoes.ini|ficando ao lado do .exe.
