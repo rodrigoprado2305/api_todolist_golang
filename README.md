@@ -12,3 +12,11 @@ Config|Run|Description
 
 go.mod|go get github.com/go-sql-driver/mysql|Biblioteca para o MYSQL
 go.mod|github.com/gin-gonic/gin|Biblioteca para utilização do gin 
+
+
+
+Config|Description
+-|-
+Configuracoes.ini|ficando ao lado do .exe.
+libmysql.dll|versao 5.7.44.0 x86
+Teste_WK_Rod.exe|Aplicação .exe principal
