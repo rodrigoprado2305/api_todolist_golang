@@ -1,5 +1,5 @@
 # API TODO LIST com GOLANG
-xxxxxxxxxxxxxxxxxxxx
+Ele é uma aplicação simples de gerenciamento de tarefas (TODO) usando o framework Gin para criar uma API RESTful e o MySQL como banco de dados.
 
 ## Database
 MySQL 5.7.44.0 - Usando docker
