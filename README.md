@@ -35,11 +35,10 @@ PUT|http://localhost:8080/tasks/3|Update task
 ```
 
 ## Summary
+1-Golang/Flutter/Docker com MYSQL - Visual Studio Code
 
 Index|Version|Description
 -|-|-
-
-1-Golang/Flutter/Docker com MYSQL - Visual Studio Code
 1.1|Versão 01|API num aquivo main.go, procedural, simples para ser tipo um arquivo macro, um unico arquivo.
 1.2|Versão 02|Evoluir ele para MVC, dividindo as responsabilidades
 1.3|Versão 03|1 método com uso de GO ROUTINE
