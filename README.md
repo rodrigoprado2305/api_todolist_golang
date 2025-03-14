@@ -53,21 +53,20 @@ Index|Version|Description
 
 ## Mapa do projeto
 
-api_todolist_golang/
-
-│── main.go
-│── config/
-│   ├── database.go
-│── model/
-│   ├── task.go
-│── controller/
-│   ├── task_controller.go
-│   ├── token_controller.go
-│── middleware/
-│   ├── auth_middleware.go
-│── routes/
-│   ├── routes.go
-│── .env
-│── go.mod <br>
-│── go.sum
+api_todolist_golang/    
+│── main.go    
+│── config/    
+│   ├── database.go    
+│── model/    
+│   ├── task.go    
+│── controller/    
+│   ├── task_controller.go    
+│   ├── token_controller.go    
+│── middleware/    
+│   ├── auth_middleware.go    
+│── routes/    
+│   ├── routes.go    
+│── .env    
+│── go.mod    
+│── go.sum    
 
