@@ -2,15 +2,22 @@ package routes
 
 import (
 	"api_todolist_golang/controller"
+	"api_todolist_golang/middleware"
 
 	"github.com/gin-gonic/gin"
-	//go get github.com/gin-gonic/gin
 )
 
 func SetupRoutes(router *gin.Engine, taskController *controller.TaskController) {
-	router.POST("/tasks", taskController.CreateTask)
-	router.GET("/tasks", taskController.GetTasks)
-	router.GET("/tasks/:id", taskController.GetTask)
-	router.PUT("/tasks/:id", taskController.UpdateTask)
-	router.DELETE("/tasks/:id", taskController.DeleteTask)
+	router.POST("/login", controller.GenerateToken)
+
+	// Rotas protegidas
+	protected := router.Group("/")
+	protected.Use(middleware.AuthMiddleware())
+	{
+		protected.POST("/tasks", taskController.CreateTask)
+		protected.GET("/tasks", taskController.GetTasks)
+		protected.GET("/tasks/:id", taskController.GetTask)
+		protected.PUT("/tasks/:id", taskController.UpdateTask)
+		protected.DELETE("/tasks/:id", taskController.DeleteTask)
+	}
 }
