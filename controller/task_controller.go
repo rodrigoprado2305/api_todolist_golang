@@ -10,6 +10,7 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"log"
+	"sync"
 )
 
 type TaskController struct {
@@ -17,9 +18,12 @@ type TaskController struct {
 }
 
 func logRequest(c *gin.Context) { // Chama a goroutine para log
-	go func() {
-		log.Printf("Go routine - Requisição recebida: %s %s", c.Request.Method, c.Request.URL.Path)
-	}()
+	log.Printf("Requisição recebida: %s %s", c.Request.Method, c.Request.URL.Path)
+}
+
+func logRequestRoutine(c *gin.Context, wg *sync.WaitGroup) {
+	defer wg.Done()
+	log.Printf("Go routine - Requisição recebida: %s %s", c.Request.Method, c.Request.URL.Path)
 }
 
 func (tc *TaskController) CreateTask(c *gin.Context) {
@@ -41,7 +45,9 @@ func (tc *TaskController) CreateTask(c *gin.Context) {
 }
 
 func (tc *TaskController) GetTasks(c *gin.Context) {
-	logRequest(c)
+	var wg sync.WaitGroup
+	wg.Add(1)
+	go logRequestRoutine(c, &wg)
 
 	tasks, err := repository.GetTasks(tc.DB)
 	if err != nil {
