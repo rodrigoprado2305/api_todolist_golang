@@ -40,33 +40,11 @@ PUT|http://localhost:8080/tasks/3|Update task
 
 Index|Version|Description
 -|-|-
-1.1|Versão 01|API num aquivo main.go, procedural, simples para ser tipo um arquivo macro, um unico arquivo.
-1.2|Versão 02|Evoluir ele para MVC, dividindo as responsabilidades
-1.3|Versão 03|1 método com uso de GO ROUTINE
-1.3|Versão 04|Uso de Access_token padrão JWT
-1.4|Versão 05|1 método com uso de micro serviço
-1.5|Versão 06|1 teste unitário
-1.6|Versão 07|Documentação da API
-1.7|Versão 08|Usar o Flutter, para criar uma interface visual para consumir os métodos.
-1.8|Versão 09|
-1.9|Versão 10|
-
-## Mapa do projeto
-
-api_todolist_golang/    
-│── main.go    
-│── config/    
-│   ├── database.go    
-│── model/    
-│   ├── task.go    
-│── controller/    
-│   ├── task_controller.go    
-│   ├── token_controller.go    
-│── middleware/    
-│   ├── auth_middleware.go    
-│── routes/    
-│   ├── routes.go    
-│── .env    
-│── go.mod    
-│── go.sum    
+ok-1.1|Versão 01|API num aquivo main.go, procedural, simples para ser tipo um arquivo macro, um unico arquivo.
+ok-1.2|Versão 02|Evoluir ele para MVC, dividindo as responsabilidades
+ok-1.3|Versão 03|1 método com uso de GO ROUTINE
+ok-1.3|Versão 04|Uso de Access_token padrão JWT
+1.4|Versão 05|micro serviço
+1.5|Versão 06|teste unitário
+1.6|Versão 07|FrontEnd - Flutter
 
