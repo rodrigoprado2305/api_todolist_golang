@@ -7,6 +7,16 @@ MySQL 5.7.44.0 - Usando docker
 docker run --name mysql5.7 -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Banco12345* mysql:5.7
 ```
 
+CREATE DATABASE IF NOT EXISTS todo_list;
+USE todo_list;
+
+CREATE TABLE IF NOT EXISTS tasks (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(200) NOT NULL,
+  description TEXT NULL,
+  completed TINYINT(1) NOT NULL DEFAULT 0
+);
+
 ## Config
 
 File|Run|Description
@@ -48,3 +58,13 @@ ok-1.3|Versão 04|Uso de Access_token padrão JWT
 1.5|Versão 06|teste unitário
 1.6|Versão 07|FrontEnd - Flutter
 
+
+## Commands
+go run main.go
+
+go build -o app
+./app
+
+go mod init api_todolist_golang
+go mod tidy
+go run main.go
