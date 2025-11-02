@@ -7,8 +7,8 @@ MySQL 5.7.44.0 - Usando docker
 docker run --name mysql5.7 -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Banco12345* mysql:5.7
 ```
 
-CREATE DATABASE IF NOT EXISTS todo_list;
-USE todo_list;
+CREATE DATABASE IF NOT EXISTS todo_db
+USE todo_db;
 
 CREATE TABLE IF NOT EXISTS tasks (
   id INT AUTO_INCREMENT PRIMARY KEY,
